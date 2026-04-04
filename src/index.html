@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1 class="header">Battleship</h1>
+    <div class="players">
+        <div class="player1">
+            <img class="left" src="./assets/left.png" alt="chopsticks">
+            <h2 class="header1">Player</h2>
+        </div>
+        <div class="player2">
+                <h2 class="header2">Computer</h2>
+                <img class="right" src="./assets/right.png" alt="chopsticks">
+        </div>
+        <div class="main">
+            <div id="playergameboard"></div>
+            <img src="./assets/sauces.png" alt="sauces_decor" class="sauces">
+            <div id="computergameboard"></div>
+            <dialog id="pop-up">
+                <h2 id="displayMessage"></h2>
+                <button id="restart">Restart</button>
+            </dialog>
+        </div>
+    </div>
+</body>
+</html>

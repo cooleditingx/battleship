@@ -34,15 +34,32 @@ export default {
         type: "asset/resource",
       },
       {
-        test: /\.m?js$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
+    ],
+  },
+  resolve: {
+    alias: {
+      config$: "./configs/app-config.js",
+      react: "./vendor/react-master",
+    },
+    extensions: [".js", ".jsx"],
+    modules: [
+      "node_modules",
+      "bower_components",
+      "shared",
+      "/shared/vendor/modules",
     ],
   },
 };
